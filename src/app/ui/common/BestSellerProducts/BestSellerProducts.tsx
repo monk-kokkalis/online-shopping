@@ -16,7 +16,7 @@ function BestSellerProducts() {
         <div className="text-2xl text-dark-grey font-bold">BESTSELLER PRODUCTS</div>
         <div className="text-sm text-light-grey">Problems trying to resolve the conflict between</div>
       </div>
-      <div className="grid grid-cols-5 gap-x-5 gap-y-12 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-x-5 gap-y-12 mt-16">
         {
           products?.products.map((product) => (<BestSellerCard key={`${product.brand}-${product.title}`} bestSeller={product} />))
         }
