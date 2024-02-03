@@ -10,9 +10,12 @@ export const iconDefaults = {
   className: ''
 }
 
+export { ChevronDownIcon } from './ChevronDownIcon';
 export { EmailIcon } from './EmailIcon';
 export { FacebookIcon } from './FacebookIcon';
 export { InstagramIcon } from './InstagramIcon';
+export { MagnifyingGlassIcon } from './MagnifyingGlassIcon';
 export { PhoneIcon } from './PhoneIcon';
 export { TwitterIcon } from './TwitterIcon';
+export { UserIcon } from './UserIcon';
 export { YoutubeIcon } from './YoutubeIcon';
