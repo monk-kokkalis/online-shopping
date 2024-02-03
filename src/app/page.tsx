@@ -10,6 +10,7 @@ export default function Home() {
       <Navbar />
       <Furniture />
       <BestSellerProducts />
+      {/* @TODO finish the remaining static sections */}
     </div>
   );
 }
