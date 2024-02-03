@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ChevronDownIcon, MagnifyingGlassIcon, UserIcon } from '../icons';
+import { ChevronDownIcon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon } from '../icons';
+import { HeartIcon } from '../icons/HeartIcon';
 
 function Navbar() {
   const links = [
@@ -21,14 +22,16 @@ function Navbar() {
           {links.map((link, index) => <Link key={`home-nav-link-${index}`} href="/">{link}</Link>)}
         </ul>
       </div>
-      {/* @TODO enable redux connection */}
       <div className='flex items-center gap-8'>
         <div className='text-blue-link flex gap-2 items-center'>
           <UserIcon width={12} height={12} />
           <span className='font-bold text-sm'>Login / Register</span>
         </div>
-        <div className='flex items-center gap-3 text-blue-link'>
+        <div className='flex items-center gap-6 text-blue-link'>
+          {/* @TODO enable redux connection */}
           <MagnifyingGlassIcon />
+          <ShoppingCartIcon />
+          <HeartIcon />
         </div>
       </div>
     </nav>
