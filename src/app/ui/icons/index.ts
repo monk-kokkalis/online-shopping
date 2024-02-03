@@ -11,4 +11,8 @@ export const iconDefaults = {
 }
 
 export { EmailIcon } from './EmailIcon';
+export { FacebookIcon } from './FacebookIcon';
+export { InstagramIcon } from './InstagramIcon';
 export { PhoneIcon } from './PhoneIcon';
+export { TwitterIcon } from './TwitterIcon';
+export { YoutubeIcon } from './YoutubeIcon';

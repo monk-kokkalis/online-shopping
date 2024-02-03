@@ -1,4 +1,11 @@
-import { EmailIcon, PhoneIcon } from "../icons";
+import { 
+  EmailIcon,
+  FacebookIcon,
+  InstagramIcon,
+  PhoneIcon,
+  TwitterIcon,
+  YoutubeIcon
+} from "../icons";
 
 function Header() {
   return (
@@ -14,6 +21,15 @@ function Header() {
         </div>
       </div>
       <div>Follow Us  and get a chance to win 80% off</div>
+      <div className="flex items-center gap-5">
+        <div>Follow Us :</div>
+        <div className="flex items-center gap-4">
+          <InstagramIcon />
+          <YoutubeIcon />
+          <FacebookIcon />
+          <TwitterIcon />
+        </div>
+      </div>
     </div>
   )
 }
