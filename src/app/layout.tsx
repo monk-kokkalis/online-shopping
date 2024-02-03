@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { montserratFontClass } from "./lib/font";
 import clsx from "clsx";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Home",
@@ -17,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, 'min-h-screen')}>{children}</body>
+      <body className={clsx(montserratFontClass, 'min-h-screen')}>{children}</body>
     </html>
   );
 }

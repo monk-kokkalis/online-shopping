@@ -9,7 +9,7 @@ import {
 
 function Header() {
   return (
-    <div className="bg-green h-[58px] px-8 flex items-center justify-between text-sm text-white">
+    <div className="bg-green h-[58px] px-8 items-center justify-between text-sm text-white hidden md:flex">
       <div className='flex items-center justify-between gap-8'>
         <div className="flex items-center gap-2">
           <PhoneIcon />
