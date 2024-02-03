@@ -21,9 +21,9 @@ type PaginatedProducts = {
   limit: number;
 }
 
-export const useGetProducts = ({ skip = 0 }) => {
+export const useGetProducts = ({ limit = 10 }) => {
   return useQuery<PaginatedProducts>({
-    queryKey: ["products", skip],
-    queryFn: () => fetch(`https://dummyjson.com/products?limit=10&skip=${skip}`).then((res) => res.json()),
+    queryKey: ["products", limit],
+    queryFn: () => fetch(`https://dummyjson.com/products?limit=${limit}`).then((res) => res.json()),
   })
 };
