@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-type Product = {
+export type Product = {
   id: number;
   title: string;
   description: string;

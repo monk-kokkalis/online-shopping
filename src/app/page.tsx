@@ -1,7 +1,7 @@
 import Header from "@/app/ui/common/Header";
 import Navbar from "./ui/home/Navbar";
 import Furniture from "./ui/home/Furniture/Furniture";
-import BestSellerProducts from "./ui/common/BestSellerProducts";
+import BestSellerProducts from "./ui/common/BestSellerProducts/BestSellerProducts";
 
 export default function Home() {
   return (

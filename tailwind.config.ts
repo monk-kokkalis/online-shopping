@@ -16,7 +16,10 @@ const config: Config = {
       },
       colors: {
         'blue-link': '#23A6F0',
+        'dark-grey': '#252B42',
         'green': '#23856D',
+        'light-grey': '#737373',
+        'muted-grey': '#BDBDBD',
         'success': '#2DC071',
       },
     },

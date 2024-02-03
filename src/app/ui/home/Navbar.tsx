@@ -17,8 +17,8 @@ function Navbar() {
   return (
     <nav className="relative px-8 py-6 flex items-center justify-between">
       <div className='flex flex-col md:flex-row justify-between gap-16 w-full md:w-auto'>
-        <div className="text-[#252B42] font-bold">Bandage</div>
-        <ul className='text-sm text-[#737373] flex flex-col md:flex-row gap-5 font-bold items-center'>
+        <div className="text-dark-grey font-bold">Bandage</div>
+        <ul className='text-sm text-light-grey flex flex-col md:flex-row gap-5 font-bold items-center'>
           {links.map((link, index) => <Link key={`home-nav-link-${index}`} href="/">{link}</Link>)}
         </ul>
       </div>
