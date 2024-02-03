@@ -1,5 +1,5 @@
 import Header from "@/app/ui/common/Header";
-import Navbar from "./ui/home/Navbar";
+import Navbar from "./ui/common/Navbar";
 import Furniture from "./ui/home/Furniture/Furniture";
 import BestSellerProducts from "./ui/common/BestSellerProducts/BestSellerProducts";
 
