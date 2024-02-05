@@ -18,7 +18,7 @@ function ShoppingCartDetails() {
     <div className="flex flex-col gap-4 min-w-4xl">
       {
         shoppingCartItems.map((item) => (
-          <div key={`shopping-cart-item-${item.product.id}`} className="grid grid-cols-4 gap-14 justify-between items-center">
+          <div key={`shopping-cart-item-${item.product.id}`} className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-14 justify-between items-center">
             <Image className="grow-1" src={item.product.images[0]} width={150} height={200} alt={`${item.product.title}`} />
             <div className='flex flex-col'>
               <div className="font-bold text-base">{item.product.title}</div>
@@ -36,11 +36,11 @@ function ShoppingCartDetails() {
               </IconButton>
             </div>
             <div className="flex flex-col">
-              <div className="text-base font-bold text-right">${formatCurrency(getDiscountedPrice({ 
+              <div className="text-base font-bold text-left md:text-right">${formatCurrency(getDiscountedPrice({ 
                 price: item.product.price,
                 discountPercentage: item.product.discountPercentage
               }) * item.quantity)}</div>
-              <div className="flex self-end">
+              <div className="flex self-start md:self-end">
                 <Button
                   variant="text"
                   onClick={() => dispatch(removeItem(item.product))}
