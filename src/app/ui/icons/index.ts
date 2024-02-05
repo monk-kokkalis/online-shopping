@@ -11,12 +11,15 @@ export const iconDefaults = {
 }
 
 export { ChevronDownIcon } from './ChevronDownIcon';
+export { DotBookIcon } from './DotBookIcon';
 export { EmailIcon } from './EmailIcon';
 export { EyeIcon } from './EyeIcon';
 export { FacebookIcon } from './FacebookIcon';
 export { HeartIcon } from './HeartIcon';
 export { InstagramIcon } from './InstagramIcon';
+export { JaggedArrowIcon } from './JaggedArrowIcon';
 export { MagnifyingGlassIcon } from './MagnifyingGlassIcon';
+export { OpenBookIcon } from './OpenBookIcon';
 export { PhoneIcon } from './PhoneIcon';
 export { ShoppingCartIcon } from './ShoppingCartIcon';
 export { StarIcon } from './StarIcon';

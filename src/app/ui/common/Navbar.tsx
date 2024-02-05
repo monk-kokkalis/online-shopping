@@ -13,6 +13,7 @@ import { useState } from 'react';
 import type { DisplayType } from '../components/Modal';
 
 function Navbar() {
+  /* @TODO important add product actions */
   const [displayType, setDisplayType] = useState<DisplayType>('shoppingCart');
   const [modalOpen, setModalOpen] = useState(false);
   const shoppingCartItemsCount = useSelector(getShoppingCartItems).length;
