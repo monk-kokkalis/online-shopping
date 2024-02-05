@@ -8,18 +8,19 @@ import ProductActions from "./ProductActions/ProductActions";
 
 async function ProductDetails ({ productId }: { productId: string; }) {
   const product = await getProduct({ id: productId });
-  /* @TODO optional handle fraction ratings */
   const rating = Math.trunc(product.rating);
   const starsFilling = [...range(rating).map(() => true), ...range(5 - rating).map(() => false)];
-  /* @TODO add BestSellerProducts component */
-  /* @TODO add remaining static sections */
   const discountedPrice = getDiscountedPrice({price: product.price, discountPercentage: product.discountPercentage});
   return (
     <div className="mt-10">
       <div className="flex flex-col md:flex-row gap-8">
-        {/* @TODO optional add carousel */}
-        {/* @TODO important add secondary images */}
-        <Image src={product.images[0]} alt={product.title} width={500} height={450} />
+        <div className="relative">
+          <Image src={product.images[0]} alt={product.title} width={500} height={450} />
+          <div className="static md:absolute left-0 flex gap-6 bottom-[-80px] mt-5 md:mt-0">
+            <Image src={product.images[1]} alt={`${product.title} second image`} width={100} height={100} />
+            <Image src={product.images[2]} alt={`${product.title} third image`} width={100} height={100} />
+          </div>
+        </div>
         <div className='flex flex-col justify-between'>
           <div className="flex flex-col gap-3">
             <div>{product.title}</div>
