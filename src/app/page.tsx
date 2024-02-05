@@ -5,6 +5,7 @@ import BestSellerProducts from "./ui/common/BestSellerProducts/BestSellerProduct
 import FeaturedProducts from "./ui/home/FeaturedProducts/FeaturedProducts";
 import FeaturedPosts from "./ui/home/FeaturedPosts/FeaturedPosts";
 import Reviews from "./ui/home/Reviews/Reviews";
+import CallToAction from "./ui/home/CallToAction/CallToAction";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <FeaturedPosts />
         <Reviews />
       </div>
+      <CallToAction />
       {/* @TODO finish the remaining static sections */}
     </div>
   );

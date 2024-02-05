@@ -15,6 +15,8 @@ function Furniture() {
             src={furniture1}
             alt="furniture 1"
             width={450}
+            loading="eager"
+            priority={true}
           />
           <FurnitureText />
         </div>

@@ -38,7 +38,6 @@ function Reviews() {
               <Image 
                 key={`gallery-item-${index}`}
                 width={145}
-                height={145}
                 src={i}
                 alt={`gallery item ${index}`}
               />
