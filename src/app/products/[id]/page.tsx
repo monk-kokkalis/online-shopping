@@ -2,6 +2,7 @@ import Header from "@/app/ui/common/Header";
 import Navbar from "@/app/ui/common/Navbar";
 import Link from 'next/link';
 import ProductDetails from "@/app/ui/products/ProductDetails";
+import ProductDetailsSkeletonLoader from "@/app/ui/products/ProductDetailsSkeletonLoader";
 import { Suspense } from "react";
 import { homePath } from "@/app/lib/routes";
 import { ChevronDownIcon } from "@/app/ui/icons";
@@ -18,7 +19,7 @@ function Page({ params: { id } }: { params: { id: string } }) {
           <div className="text-muted-grey font-bold">Shop</div>
         </div>
         <div className="px-8">
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<ProductDetailsSkeletonLoader />}>
             <ProductDetails productId={id} />
           </Suspense>
         </div>
