@@ -28,7 +28,7 @@ function Modal({ open, displayType, onClose }: Props) {
         {
           displayType === 'shoppingCart' ? (
             shoppingCartItems.length > 0
-              ? (<ShoppingCartDetails />)
+              ? (<ShoppingCartDetails onClose={onClose} />)
               : (<p>You shopping cart is empty.</p>)
           ) : (
             wishListItems.length > 0
