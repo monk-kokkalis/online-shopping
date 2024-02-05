@@ -7,8 +7,14 @@ import { useSelector } from 'react-redux';
 import { useMemo } from 'react';
 import { getShoppingCartItems } from '@/app/lib/redux/selectors/shoppingCart';
 import { getWishListItems } from '@/app/lib/redux/selectors/wishList';
+import Modal from '../components/Modal';
+import Button from '@mui/material/Button';
+import { useState } from 'react';
+import type { DisplayType } from '../components/Modal';
 
 function Navbar() {
+  const [displayType, setDisplayType] = useState<DisplayType>('shoppingCart');
+  const [modalOpen, setModalOpen] = useState(false);
   const shoppingCartItemsCount = useSelector(getShoppingCartItems).length;
   const wishListItemsCount = useSelector(getWishListItems).length;
   const links = useMemo(() => [
@@ -22,8 +28,18 @@ function Navbar() {
     "Contact",
     "Pages"
   ], []);
+
+  const onHeaderButtonClick = (display: DisplayType) => {
+    setDisplayType(display);
+    setModalOpen(true);
+  }
   return (
     <nav className="container relative px-8 py-6 flex items-center justify-between">
+      <Modal
+        open={modalOpen}
+        displayType={displayType}
+        onClose={() => setModalOpen(false)}
+      />
       <div className='flex flex-col md:flex-row justify-between gap-16 w-full md:w-auto'>
         <div className="text-dark-grey font-bold">Bandage</div>
         <ul className='text-sm text-light-grey flex flex-col md:flex-row gap-5 font-bold items-center'>
@@ -35,19 +51,25 @@ function Navbar() {
           <UserIcon width={12} height={12} />
           <span className='font-bold text-sm'>Login / Register</span>
         </div>
-        <div className='flex items-center gap-3 text-[#0e1d56] md:text-blue-link'>
-          <div className='flex gap-2 items-center'>
+        <div className='flex items-center text-[#0e1d56] md:text-blue-link'>
+          <Button variant="text" className='flex gap-2 items-center min-h-8 p-0 min-w-0 w-12'>
             <MagnifyingGlassIcon />
-            <div className='text-sm min-w-[6px]'></div>
-          </div>
-          <div className='flex gap-2 items-center'>
+            <div className='text-sm min-w-[9px]'></div>
+            </Button>
+          <Button
+            variant="text"
+            className='flex gap-2 items-center min-h-8 p-0 min-w-0 w-12'
+            onClick={() => onHeaderButtonClick('shoppingCart')}>
             <ShoppingCartIcon />
-            <div className='text-sm min-w-[6px]'>{!!shoppingCartItemsCount && (shoppingCartItemsCount)}</div>
-          </div>
-          <div className='flex gap-2 items-center'>
+            <div className='text-sm min-w-[9px]'>{!!shoppingCartItemsCount && (shoppingCartItemsCount)}</div>
+          </Button>
+          <Button
+            variant="text"
+            className='flex gap-2 items-center min-h-8 p-0 min-w-0 w-12'
+            onClick={() => onHeaderButtonClick('wishList')}>
             <HeartIcon />
-            <div className='text-sm min-w-[6px]'>{!!wishListItemsCount && (wishListItemsCount)}</div>
-          </div>
+            <div className='text-sm min-w-[9px]'>{!!wishListItemsCount && (wishListItemsCount)}</div>
+          </Button>
         </div>
       </div>
     </nav>
