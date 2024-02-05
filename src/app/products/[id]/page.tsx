@@ -15,6 +15,7 @@ import {
   AWSIcon,
   RedditIcon
 } from "@/app/ui/icons";
+import BestSellerProducts from "@/app/ui/common/BestSellerProducts/BestSellerProducts";
 
 function Page({ params: { id } }: { params: { id: string } }) {
   return (
@@ -32,7 +33,10 @@ function Page({ params: { id } }: { params: { id: string } }) {
             <ProductDetails productId={id} />
           </Suspense>
         </div>
-        <div className="px-8 md:px-20 flex flex-col md:flex-row justify-between items-center py-20 md:py-28">
+        <div className="hidden md:block mt-10">
+          <BestSellerProducts paginated={false} />
+        </div>
+        <div className="px-8 md:px-20 flex flex-col md:flex-row justify-between items-center py-14">
           <HooliIcon width={75} height={75} />
           <LyftIcon width={75} height={75} />
           <CavalierIcon width={75} height={75} />
