@@ -4,6 +4,7 @@ import { getShoppingCartItems } from '@/app/lib/redux/selectors/shoppingCart';
 import { getWishListItems } from '@/app/lib/redux/selectors/wishList';
 import { useSelector } from 'react-redux';
 import ShoppingCartDetails from './ShoppingCartDetails';
+import WishListDetails from './WishListDetails';
 
 export type DisplayType = 'wishList' | 'shoppingCart';
 
@@ -32,7 +33,7 @@ function Modal({ open, displayType, onClose }: Props) {
               : (<p>You shopping cart is empty.</p>)
           ) : (
             wishListItems.length > 0
-              ? (<div>Wish list items should be here</div>)
+              ? (<WishListDetails onClose={onClose} />)
               : (<p>Your wish list is empty.</p>)
           )
         }
