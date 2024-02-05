@@ -4,13 +4,10 @@ import { StarIcon } from "../../icons";
 import range from 'lodash/range';
 import { formatCurrency, getDiscountedPrice, getRandomInt } from "@/app/lib/auxiliary";
 import clsx from "clsx";
-import BestSellerProducts from "../../common/BestSellerProducts/BestSellerProducts";
 import ProductActions from "./ProductActions/ProductActions";
 
 async function ProductDetails ({ productId }: { productId: string; }) {
   const product = await getProduct({ id: productId });
-  /* @TODO remove */
-  console.log('dat product --->', product)
   /* @TODO optional handle fraction ratings */
   const rating = Math.trunc(product.rating);
   const starsFilling = [...range(rating).map(() => true), ...range(5 - rating).map(() => false)];
@@ -81,9 +78,6 @@ async function ProductDetails ({ productId }: { productId: string; }) {
             width={500} height={450}
           />
         </div>
-      </div>
-      <div className="hidden md:block">
-        <BestSellerProducts paginated={false} />
       </div>
     </div>
   )

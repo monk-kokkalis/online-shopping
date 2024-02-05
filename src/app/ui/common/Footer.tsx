@@ -52,6 +52,7 @@ function Footer() {
             <TwitterIcon />
           </div>
         </div>
+        <div className="w-full h-[1px] bg-muted-grey opacity-40"></div>
         <div className="flex flex-col md:flex-row justify-between gap-10 items-start md:items-center">
           {
             sections.map((section) => (
