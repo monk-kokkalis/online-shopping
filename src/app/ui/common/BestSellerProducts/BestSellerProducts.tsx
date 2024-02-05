@@ -6,7 +6,11 @@ import BestSellerCard from "./BestSellerCard/BestSellerCard";
 import Skeleton from '@mui/material/Skeleton';
 import range from 'lodash/range';
 
-function BestSellerProducts() {
+type Props = {
+  paginated?: boolean;
+}
+
+function BestSellerProducts({ paginated = true }: Props) {
   const [limit, setLimit] = useState(10);
   const { data: products, isLoading: loadingProducts } = useGetProducts({ limit });
   return (
@@ -32,7 +36,7 @@ function BestSellerProducts() {
         }
       </div>
       {
-        limit !== products?.total && (
+        limit !== products?.total && paginated && (
           <div className="flex justify-center mt-14">
             <LoadingButton
               onClick={() => setLimit(limit + 10)}
