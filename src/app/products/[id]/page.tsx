@@ -32,7 +32,7 @@ function Page({ params: { id } }: { params: { id: string } }) {
             <ProductDetails productId={id} />
           </Suspense>
         </div>
-        <div className="px-8 md:px-20 flex flex-col md:flex-row justify-between items-center py-14">
+        <div className="px-8 md:px-20 flex flex-col md:flex-row justify-between items-center py-20 md:py-28">
           <HooliIcon width={75} height={75} />
           <LyftIcon width={75} height={75} />
           <CavalierIcon width={75} height={75} />
