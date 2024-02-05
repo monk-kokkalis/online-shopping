@@ -21,7 +21,7 @@ function FeaturedProducts() {
   ]
 
   return (
-    <div className="mt-12 container m-auto px-8 md:px-20">
+    <div className="mt-20 container m-auto px-8 md:px-20">
       <div className="flex flex-col gap-2.5 items-center">
         <div className="text-xl text-light-grey">Featured Products</div>
         <div className="uppercase text-2xl font-bold">The Best Services</div>

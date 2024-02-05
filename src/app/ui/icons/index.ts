@@ -11,10 +11,12 @@ export const iconDefaults = {
 }
 
 export { ChevronDownIcon } from './ChevronDownIcon';
+export { ClockIcon } from './ClockIcon';
 export { DotBookIcon } from './DotBookIcon';
 export { EmailIcon } from './EmailIcon';
 export { EyeIcon } from './EyeIcon';
 export { FacebookIcon } from './FacebookIcon';
+export { GraphIcon } from './GraphIcon';
 export { HeartIcon } from './HeartIcon';
 export { InstagramIcon } from './InstagramIcon';
 export { JaggedArrowIcon } from './JaggedArrowIcon';

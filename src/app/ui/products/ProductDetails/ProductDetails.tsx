@@ -9,6 +9,8 @@ import ProductActions from "./ProductActions/ProductActions";
 
 async function ProductDetails ({ productId }: { productId: string; }) {
   const product = await getProduct({ id: productId });
+  /* @TODO remove */
+  console.log('dat product --->', product)
   /* @TODO optional handle fraction ratings */
   const rating = Math.trunc(product.rating);
   const starsFilling = [...range(rating).map(() => true), ...range(5 - rating).map(() => false)];

@@ -3,6 +3,7 @@ import Navbar from "./ui/common/Navbar";
 import Furniture from "./ui/home/Furniture/Furniture";
 import BestSellerProducts from "./ui/common/BestSellerProducts/BestSellerProducts";
 import FeaturedProducts from "./ui/home/FeaturedProducts/FeaturedProducts";
+import FeaturedPosts from "./ui/home/FeaturedPosts/FeaturedPosts";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Furniture />
         <BestSellerProducts />
         <FeaturedProducts />
+        <FeaturedPosts />
       </div>
       {/* @TODO finish the remaining static sections */}
     </div>
