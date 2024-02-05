@@ -1,8 +1,8 @@
 import Header from "@/app/ui/common/Header";
 import Navbar from "@/app/ui/common/Navbar";
 import Link from 'next/link';
-import ProductDetails from "@/app/ui/products/ProductDetails";
-import ProductDetailsSkeletonLoader from "@/app/ui/products/ProductDetailsSkeletonLoader";
+import ProductDetails from "@/app/ui/products/ProductDetails/ProductDetails";
+import ProductDetailsSkeletonLoader from "@/app/ui/products/ProductDetails/ProductDetailsSkeletonLoader";
 import { Suspense } from "react";
 import { homePath } from "@/app/lib/routes";
 import { ChevronDownIcon } from "@/app/ui/icons";

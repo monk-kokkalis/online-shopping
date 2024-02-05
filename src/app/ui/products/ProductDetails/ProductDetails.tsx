@@ -1,12 +1,11 @@
 import { getProduct } from "@/app/lib/data";
 import Image from "next/image";
-import { EyeIcon, HeartIcon, ShoppingCartIcon, StarIcon } from "../icons";
+import { EyeIcon, StarIcon } from "../../icons";
 import range from 'lodash/range';
 import { formatCurrency, getRandomInt } from "@/app/lib/auxiliary";
 import clsx from "clsx";
-import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
-import BestSellerProducts from "../common/BestSellerProducts/BestSellerProducts";
+import BestSellerProducts from "../../common/BestSellerProducts/BestSellerProducts";
+import ProductActions from "./ProductActions/ProductActions";
 
 async function ProductDetails ({ productId }: { productId: string; }) {
   const product = await getProduct({ id: productId });
@@ -45,19 +44,7 @@ async function ProductDetails ({ productId }: { productId: string; }) {
                   <div key={`color-sphere-${index}`} className={clsx('w-7 h-7 rounded-full', color)}></div>
                 ))}
               </div>
-              {/* @TODO add redux connection */}
-              <div className="flex gap-3 items-center">
-                <Button variant="contained" className='bg-blue-link'>Select Options</Button>
-                <IconButton className="rounded-full border-solid border-[1px] border-faded-grey">
-                  <HeartIcon className="text-light-grey" />
-                </IconButton>
-                <IconButton className="rounded-full border-solid border-[1px] border-faded-grey">
-                  <ShoppingCartIcon className="text-light-grey" />
-                </IconButton>
-                <IconButton className="rounded-full border-solid border-[1px] border-faded-grey">
-                  <EyeIcon className="text-light-grey" />
-                </IconButton>
-              </div>
+              <ProductActions product={product} />
             </div>
           </div>
         </div>
