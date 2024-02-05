@@ -42,7 +42,7 @@ function Footer() {
   ]
 
   return (
-    <footer className='mt-10 container m-auto px-8 md:px-20'>
+    <footer className='container m-auto px-8 md:px-20'>
       <div className='flex flex-col gap-10 justify-between'>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5">
           <div className="font-bold text-2xl text-dark-grey">Bandage</div>

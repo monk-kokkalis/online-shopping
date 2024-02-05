@@ -6,6 +6,15 @@ import ProductDetailsSkeletonLoader from "@/app/ui/products/ProductDetails/Produ
 import { Suspense } from "react";
 import { homePath } from "@/app/lib/routes";
 import { ChevronDownIcon } from "@/app/ui/icons";
+import Footer from "@/app/ui/common/Footer";
+import { 
+  HooliIcon,
+  LyftIcon,
+  CavalierIcon,
+  StripeIcon,
+  AWSIcon,
+  RedditIcon
+} from "@/app/ui/icons";
 
 function Page({ params: { id } }: { params: { id: string } }) {
   return (
@@ -23,6 +32,15 @@ function Page({ params: { id } }: { params: { id: string } }) {
             <ProductDetails productId={id} />
           </Suspense>
         </div>
+        <div className="px-8 md:px-20 flex flex-col md:flex-row justify-between items-center py-14">
+          <HooliIcon width={75} height={75} />
+          <LyftIcon width={75} height={75} />
+          <CavalierIcon width={75} height={75} />
+          <StripeIcon width={75} height={75} />
+          <AWSIcon width={75} height={75} />
+          <RedditIcon width={75} height={75} />
+        </div>
+        <Footer />
       </div>
     </div>
   )
