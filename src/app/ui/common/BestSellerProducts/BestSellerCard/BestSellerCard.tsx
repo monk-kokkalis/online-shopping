@@ -21,8 +21,8 @@ function BestSellerCard({ bestSeller }: Props) {
         <div className="text-dark-grey text-base font-bold min-h-12">{title}</div>
         <div className="text-light-grey text-sm font-bold">{brand}</div>
         <div className="flex justify-center gap-3 text-base font-bold">
-          <div className="text-muted-grey">${price}</div>
-          <div className="text-green">${discountedPrice.toFixed(2)}</div>
+          <div className="text-muted-grey">${Intl.NumberFormat("en-US").format(price)}</div>
+          <div className="text-green">${Intl.NumberFormat("en-US").format(Number(discountedPrice.toFixed(2)))}</div>
         </div>
       </Link>
   )

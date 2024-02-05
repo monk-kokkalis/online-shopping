@@ -15,7 +15,7 @@ function Navbar() {
     "Pages"
   ];
   return (
-    <nav className="relative px-8 py-6 flex items-center justify-between">
+    <nav className="container relative px-8 py-6 flex items-center justify-between">
       <div className='flex flex-col md:flex-row justify-between gap-16 w-full md:w-auto'>
         <div className="text-dark-grey font-bold">Bandage</div>
         <ul className='text-sm text-light-grey flex flex-col md:flex-row gap-5 font-bold items-center'>

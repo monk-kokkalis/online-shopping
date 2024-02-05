@@ -17,6 +17,7 @@ export { InstagramIcon } from './InstagramIcon';
 export { MagnifyingGlassIcon } from './MagnifyingGlassIcon';
 export { PhoneIcon } from './PhoneIcon';
 export { ShoppingCartIcon } from './ShoppingCartIcon';
+export { StarIcon } from './StarIcon';
 export { TwitterIcon } from './TwitterIcon';
 export { UserIcon } from './UserIcon';
 export { YoutubeIcon } from './YoutubeIcon';

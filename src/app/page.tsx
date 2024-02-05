@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <div className="pb-10">
       <Header />
-      <Navbar />
-      <Furniture />
-      <BestSellerProducts />
+      <div className="container m-auto">
+        <Navbar />
+        <Furniture />
+        <BestSellerProducts />
+      </div>
       {/* @TODO finish the remaining static sections */}
     </div>
   );
