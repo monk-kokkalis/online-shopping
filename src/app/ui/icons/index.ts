@@ -13,6 +13,7 @@ export const iconDefaults = {
 export { ChevronDownIcon } from './ChevronDownIcon';
 export { EmailIcon } from './EmailIcon';
 export { FacebookIcon } from './FacebookIcon';
+export { HeartIcon } from './HeartIcon';
 export { InstagramIcon } from './InstagramIcon';
 export { MagnifyingGlassIcon } from './MagnifyingGlassIcon';
 export { PhoneIcon } from './PhoneIcon';

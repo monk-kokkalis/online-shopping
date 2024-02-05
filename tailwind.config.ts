@@ -20,7 +20,10 @@ const config: Config = {
         'green': '#23856D',
         'light-grey': '#737373',
         'muted-grey': '#BDBDBD',
+        'faded-grey': '#e0e0e0',
+        'red': '#d32f2f',
         'success': '#2DC071',
+        'orange': '#E77C40'
       },
     },
   },

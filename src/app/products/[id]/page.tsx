@@ -12,7 +12,7 @@ function Page({ params: { id } }: { params: { id: string } }) {
       <Header />
       <div className="container m-auto">
         <Navbar />
-        <div className='flex gap-3 items-center px-8 mt-14 text-sm'>
+        <div className='flex gap-3 items-center px-8 mt-14 text-sm justify-center md:justify-start'>
           <Link className='text-dark-grey font-bold' href={homePath()}>Home</Link>
           <ChevronDownIcon className="rotate-[-90deg] text-muted-grey" />
           <div className="text-muted-grey font-bold">Shop</div>
