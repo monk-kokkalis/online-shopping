@@ -12,6 +12,7 @@ export const iconDefaults = {
 
 export { ChevronDownIcon } from './ChevronDownIcon';
 export { EmailIcon } from './EmailIcon';
+export { EyeIcon } from './EyeIcon';
 export { FacebookIcon } from './FacebookIcon';
 export { HeartIcon } from './HeartIcon';
 export { InstagramIcon } from './InstagramIcon';
