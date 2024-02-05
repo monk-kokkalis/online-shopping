@@ -61,7 +61,7 @@ function Navbar() {
             className='flex gap-2 items-center min-h-8 p-0 min-w-0 w-12'
             onClick={() => onHeaderButtonClick('shoppingCart')}>
             <ShoppingCartIcon />
-            <div className='text-sm min-w-[9px]'>{!!shoppingCartItemsCount && (shoppingCartItemsCount)}</div>
+            <span className='text-sm min-w-[9px]'>{!!shoppingCartItemsCount && (shoppingCartItemsCount)}</span>
           </Button>
           <Button
             variant="text"

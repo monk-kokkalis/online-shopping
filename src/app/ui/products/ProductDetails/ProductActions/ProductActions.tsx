@@ -51,7 +51,9 @@ function ProductActions({ product }: Props) {
 
   return (
     <div className="flex gap-3 items-center">
-      <Button variant="contained" className='bg-blue-link'>Select Options</Button>
+      <Button variant="contained" className='bg-blue-link normal-case!' sx={{
+        textTransform: 'none',
+      }}>Select Options</Button>
       <IconButton
         disabled={itemSelected}
         className={buttonClass}

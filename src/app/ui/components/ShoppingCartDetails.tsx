@@ -49,8 +49,15 @@ function ShoppingCartDetails({ onClose }: Props) {
                 <Button
                   variant="text"
                   onClick={() => dispatch(removeItem(item.product))}
-                  className="text-red text-xs normal-case p-0 min-w-0 relative"
-                  size="small">
+                  className="p-0 min-w-0 relative"
+                  size="small"
+                  sx={{
+                    color: "#d32f2f",
+                    fontSize: '12px',
+                    textTransform: 'none',
+                    padding: '0',
+                    minWidth: '0'
+                  }}>
                     Remove
                 </Button>
               </div>
@@ -67,8 +74,20 @@ function ShoppingCartDetails({ onClose }: Props) {
           <div className="text-dark-grey text-xl font-bold">${itemsTotal}</div>
         </div>
         <div className="flex gap-5 items-center justify-end mt-5">
-          <Button variant="text" className="normal-case text-xs text-red" onClick={onClose}>Cancel</Button>
-          <Button variant="contained" className='bg-blue-link normal-case'>Checkout</Button>
+          <Button
+            variant="text"
+            onClick={onClose}
+            sx={{
+              color: "#d32f2f",
+              fontSize: '12px',
+              textTransform: 'none'
+            }}>Cancel</Button>
+          <Button
+            variant="contained"
+            className='bg-blue-link'
+            sx={{
+              textTransform: 'none'
+            }}>Checkout</Button>
         </div>
       </div>
     </div>

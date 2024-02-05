@@ -33,7 +33,14 @@ function WishListDetails({ onClose }: Props) {
                   variant="text"
                   onClick={() => dispatch(removeWishListItem(item.product))}
                   className="text-red text-xs normal-case p-0 min-w-0 relative"
-                  size="small">
+                  size="small"
+                  sx={{
+                    color: "#d32f2f",
+                    fontSize: '12px',
+                    textTransform: 'none',
+                    padding: '0',
+                    minWidth: '0'
+                  }}>
                     Remove
                 </Button>
               </div>
@@ -43,7 +50,13 @@ function WishListDetails({ onClose }: Props) {
       }
       <div className="border-t-2 border-grey-6 mt-5 py-5 text-right">
         <div className="flex gap-5 items-center justify-end mt-5">
-          <Button variant="contained" className='bg-blue-link normal-case' onClick={onClose}>Continue shopping</Button>
+          <Button
+            variant="contained"
+            className='bg-blue-link normal-case'
+            onClick={onClose}
+            sx={{
+              textTransform: 'none'
+            }}>Continue shopping</Button>
         </div>
       </div>
     </div>
