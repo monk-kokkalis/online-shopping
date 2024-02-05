@@ -1,8 +1,8 @@
 import { getProduct } from "@/app/lib/data";
 import Image from "next/image";
-import { EyeIcon, StarIcon } from "../../icons";
+import { StarIcon } from "../../icons";
 import range from 'lodash/range';
-import { formatCurrency, getRandomInt } from "@/app/lib/auxiliary";
+import { formatCurrency, getDiscountedPrice, getRandomInt } from "@/app/lib/auxiliary";
 import clsx from "clsx";
 import BestSellerProducts from "../../common/BestSellerProducts/BestSellerProducts";
 import ProductActions from "./ProductActions/ProductActions";
@@ -14,6 +14,7 @@ async function ProductDetails ({ productId }: { productId: string; }) {
   const starsFilling = [...range(rating).map(() => true), ...range(5 - rating).map(() => false)];
   /* @TODO add BestSellerProducts component */
   /* @TODO add remaining static sections */
+  const discountedPrice = getDiscountedPrice({price: product.price, discountPercentage: product.discountPercentage});
   return (
     <div className="mt-10">
       <div className="flex flex-col md:flex-row gap-8">
@@ -30,7 +31,7 @@ async function ProductDetails ({ productId }: { productId: string; }) {
               <div className="text-sm font-bold text-light-grey">{getRandomInt(5, 20)} Reviews</div> 
             </div>
             <div className="flex flex-col">
-              <div className="text-2xl font-bold">${formatCurrency(product.price)}</div>
+              <div className="text-2xl font-bold">${formatCurrency(discountedPrice)}</div>
               <div className="flex gap-2 font-bold text-sm">
                 <div className='text-light-grey'>Availability  :</div>
                 <div className='text-blue-link'>In Stock</div>

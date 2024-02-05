@@ -1,11 +1,14 @@
 import { getShoppingCartItems } from "@/app/lib/redux/selectors/shoppingCart";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
-import { IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { 
   increaseShoppingCartItemQuantity,
-  decreaseShoppingCartItemQuantity
- } from "../../lib/redux/reducers/shoppingCart";
+  decreaseShoppingCartItemQuantity,
+  removeItem
+} from "../../lib/redux/reducers/shoppingCart";
+import { getDiscountedPrice } from "@/app/lib/auxiliary";
+import { formatCurrency } from "@/app/lib/auxiliary";
 
 function ShoppingCartDetails() {
   const shoppingCartItems = useSelector(getShoppingCartItems);
@@ -15,8 +18,8 @@ function ShoppingCartDetails() {
     <div className="flex flex-col gap-4 min-w-4xl">
       {
         shoppingCartItems.map((item) => (
-          <div key={`shopping-cart-item-${item.product.id}`} className="flex gap-14 justify-between items-center">
-            <Image src={item.product.images[0]} width={150} height={200} alt={`${item.product.title}`} />
+          <div key={`shopping-cart-item-${item.product.id}`} className="grid grid-cols-4 gap-14 justify-between items-center">
+            <Image className="grow-1" src={item.product.images[0]} width={150} height={200} alt={`${item.product.title}`} />
             <div className='flex flex-col'>
               <div className="font-bold text-base">{item.product.title}</div>
               <div className="font-bold text-xs text-light-grey">{item.product.brand}</div>
@@ -32,7 +35,21 @@ function ShoppingCartDetails() {
                 <div className="w-7">+</div>
               </IconButton>
             </div>
-            <div>price summary</div>
+            <div className="flex flex-col">
+              <div className="text-base font-bold text-right">${formatCurrency(getDiscountedPrice({ 
+                price: item.product.price,
+                discountPercentage: item.product.discountPercentage
+              }) * item.quantity)}</div>
+              <div className="flex self-end">
+                <Button
+                  variant="text"
+                  onClick={() => dispatch(removeItem(item.product))}
+                  className="text-red text-xs normal-case p-0 min-w-0 relative"
+                  size="small">
+                    Remove
+                </Button>
+              </div>
+            </div>
           </div>
         ))
       }
