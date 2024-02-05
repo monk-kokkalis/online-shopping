@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { productPath } from "@/app/lib/routes";
+import { formatCurrency } from "@/app/lib/auxiliary";
 import type { Product } from "@/app/lib/react-query/queries/useGetProducts";
 
 type Props = {
@@ -21,8 +22,8 @@ function BestSellerCard({ bestSeller }: Props) {
         <div className="text-dark-grey text-base font-bold min-h-12">{title}</div>
         <div className="text-light-grey text-sm font-bold">{brand}</div>
         <div className="flex justify-center gap-3 text-base font-bold">
-          <div className="text-muted-grey">${Intl.NumberFormat("en-US").format(price)}</div>
-          <div className="text-green">${Intl.NumberFormat("en-US").format(Number(discountedPrice.toFixed(2)))}</div>
+          <div className="text-muted-grey">${formatCurrency(price)}</div>
+          <div className="text-green">${formatCurrency(Number(discountedPrice.toFixed(2)))}</div>
         </div>
       </Link>
   )

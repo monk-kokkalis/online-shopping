@@ -2,7 +2,7 @@ import { getProduct } from "@/app/lib/data";
 import Image from "next/image";
 import { StarIcon } from "../icons";
 import range from 'lodash/range';
-import { getRandomInt } from "@/app/lib/auxiliary";
+import { formatCurrency, getRandomInt } from "@/app/lib/auxiliary";
 
 async function ProductDetails ({ productId }: { productId: string; }) {
   const product = await getProduct({ id: productId });
@@ -21,6 +21,13 @@ async function ProductDetails ({ productId }: { productId: string; }) {
               <StarIcon key={`rating-star-${index}`} className="text-yellow-500" filled={filled} />
             ))}
             <div className="text-sm font-bold text-light-grey">{getRandomInt(5, 20)} Reviews</div> 
+          </div>
+          <div className="flex flex-col">
+            <div className="text-2xl font-bold">${formatCurrency(product.price)}</div>
+            <div className="flex gap-2 font-bold text-sm">
+              <div className='text-light-grey'>Availability  :</div>
+              <div className='text-blue-link'>In Stock</div>
+            </div>
           </div>
         </div>
       </div>
